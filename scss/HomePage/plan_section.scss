@@ -1,0 +1,138 @@
+.plan_section {
+  padding: 100px 0;
+  background: #fff;
+  h2 {
+    text-align: center;
+    color: rgb(24, 21, 21);
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .plan-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 20px;
+    .plan {
+      background: rgb(255, 255, 255);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.075),
+        0 6px 20px 0 rgba(0, 0, 0, 0.116);
+
+      .price {
+        background: rgb(27, 27, 27);
+        padding: 50px 0;
+        h2 {
+          color: $orange;
+          font-size: 50px;
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+      .order {
+        padding: 50px 0;
+        p {
+          color: rgb(88, 86, 86);
+          padding: 5px 0;
+          font-weight: bold;
+        }
+        .bot {
+          margin-bottom: 40px;
+        }
+        .btn {
+          padding: 15px 40px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* box */
+.box-dis {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  color: #fff;
+  text-align: center;
+  height: 600px;
+  width: 600px;
+  h1 {
+    color: $orange;
+    font-size: 38px;
+    padding: 50px 0 15px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .fas,
+  .far {
+    color: $orange;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  input {
+    margin-bottom: 15px;
+    width: 60%;
+    height: 30px;
+    border: none;
+    font-size: 14px;
+    padding-left: 10px;
+    color: gray;
+    border-radius: 2px;
+  }
+  .btn {
+    padding: 20px 40px;
+    font-size: 16px;
+    border: none;
+  }
+  .fa-times-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    right: 5px;
+  }
+}
+
+/* medi query (850px) */
+
+@media (max-width: 850px) {
+  .plan_section {
+    padding: 80px 0;
+    h2 {
+      font-size: 32px;
+    }
+    .plan-box {
+      grid-template-columns: 1fr;
+      .plan {
+        .price {
+          padding: 35px 0;
+          h2 {
+            font-size: 45px;
+          }
+        }
+      }
+    }
+    .order {
+      padding: 20px 0;
+      .btn {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* box */
+  .box-dis {
+    left: 50%;
+    height: 600px;
+    width: 90%;
+    z-index: 1000;
+  }
+}

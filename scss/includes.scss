@@ -1,0 +1,109 @@
+$orange: #f23a2e;
+$black: rgb(73, 73, 73);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  background-image: linear-gradient(to top, #f43b473d 0%, #09071ad8 100%),
+    url("/imgs/main-header.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 400;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
+  color: #b6b6b6;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.m-top {
+  margin: 100px 0;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: $orange;
+  color: #fff;
+  margin-top: 50px;
+  transition: background 400ms;
+  &:hover {
+    background: rgb(177, 55, 6);
+  }
+}
+.scrollTop {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: $orange;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.281),
+    0 6px 20px 0 rgba(0, 0, 0, 0.116);
+
+  span {
+    line-height: 60px;
+    font-size: 15px;
+  }
+}
+
+.b-gray {
+  background: rgba(226, 226, 226, 0.377);
+}
+@media (max-width: 1300px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

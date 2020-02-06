@@ -1,0 +1,121 @@
+.event_section {
+  display: flex;
+  background: #ffff;
+  .cont-event {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .img_event {
+      flex: 1;
+      background: url("/imgs/event.JPG");
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .p_event {
+      padding: 200px 50px;
+
+      span {
+        font-size: 16px;
+        color: gray;
+        font-weight: 500;
+      }
+      h2 {
+        color: black;
+        text-align: left;
+      }
+      .upcoming-event {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        .event-16 {
+          h2 {
+            color: $orange;
+          }
+          h3 {
+            color: $black;
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* register events*/
+.register {
+  background-image: linear-gradient(to top, #f43b4725 0%, #09071a9d 100%),
+    url("/imgs/slider.png");
+  background-attachment: fixed;
+  padding: 100px 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-align: center;
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  h2 {
+    padding-top: 20px;
+    font-size: 50px;
+  }
+  .day {
+    font-size: 66px;
+    padding: 0 50px;
+    color: $orange;
+    font-weight: bold;
+  }
+  div {
+    margin-top: 40px;
+    .btn {
+      padding: 20px 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+/* media query (850px) */
+
+@media (max-width: 850px) {
+  .event_section {
+    .cont-event {
+      grid-template-columns: 1fr;
+      width: 90%;
+      margin: auto;
+      .img_event {
+        display: none;
+      }
+      .p_event {
+        padding: 100px 0;
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .register {
+    padding: 100px 20px;
+    span {
+      font-size: 16px;
+    }
+    h2 {
+      padding-top: 15px;
+      font-size: 32px;
+    }
+    .day {
+      font-size: 46px;
+      padding: 0 30px;
+    }
+    div {
+      margin-top: 40px;
+      .btn {
+        padding: 15px 30px;
+        font-size: 16px;
+      }
+    }
+  }
+}

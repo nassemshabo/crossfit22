@@ -1,0 +1,17 @@
+{
+  "name": "fitness_website-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sal.js": "^0.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "sass": "node-sass scss/main.scss css/main.css  -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

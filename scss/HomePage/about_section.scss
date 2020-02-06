@@ -1,0 +1,113 @@
+.about_section {
+  background: #fff;
+  .about_box {
+    display: flex;
+    .img_about {
+      flex: 1;
+      background-image: url("/imgs/about.png");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 400px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .about_us {
+      flex: 1;
+      padding-left: 50px;
+      span {
+        color: rgb(94, 94, 94);
+        font-size: 16px;
+        font-weight: 600;
+      }
+      h2 {
+        color: black;
+        margin-top: 20px;
+      }
+      p {
+        margin-top: 20px;
+        color: rgb(168, 168, 168);
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+/* about_icons */
+
+.about_icons {
+  background: #fff;
+  .icons_box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+
+    text-align: center;
+    .icons {
+      padding: 50px 100px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.021),
+        0 6px 20px 0 rgba(0, 0, 0, 0.027);
+      .fas {
+        font-size: 50px;
+        margin: 20px 0;
+        color: $black;
+      }
+      span {
+        font-size: 20px;
+        color: $black;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+/* media query (850px) */
+
+@media (max-width: 850px) {
+  .about_icons {
+    .icons_box {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      .icons {
+        padding: 50px 50px;
+        .fas {
+          font-size: 30px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about_section {
+    .about_box {
+      flex-direction: column;
+      .img_about {
+        display: none;
+      }
+      .about_us {
+        padding: 0 10px;
+      }
+    }
+  }
+  .about_icons {
+    .icons_box {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      .icons {
+        padding: 50px 20px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

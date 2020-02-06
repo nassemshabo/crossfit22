@@ -1,0 +1,142 @@
+.header {
+  .header-navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      h1 {
+        font-size: 30px;
+        color: $orange;
+      }
+    }
+    .nav {
+      .items {
+        list-style: none;
+        .close-menu {
+          display: none;
+        }
+        .item {
+          display: inline-block;
+          padding-left: 50px;
+          a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            transition: color 400ms;
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+      }
+      .menu {
+        width: 60px;
+        height: 60px;
+        padding-top: 14px;
+        display: none;
+        &:hover {
+          cursor: pointer;
+        }
+        .item-menu {
+          width: 80%;
+          background: rgb(255, 255, 255);
+          height: 6px;
+          margin: 0 auto 5px auto;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+/* this is main-header */
+.main-header {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  .heading-section {
+    span {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    h1 {
+      font-size: 70px;
+      line-height: 1.2;
+      margin-bottom: 35px;
+    }
+    .btn {
+      padding: 20px 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+/* mendia query*/
+@media (max-width: 850px) {
+  .header {
+    .header-navbar {
+      .nav {
+        .items {
+          position: fixed;
+          top: 0;
+          right: -400px;
+          bottom: 0;
+          background: rgb(32, 32, 32);
+          width: 350px;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: center;
+          padding-top: 80px;
+          .close-menu {
+            display: block;
+            font-size: 26px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+          }
+          .item {
+            padding-left: 0px;
+            padding-bottom: 30px;
+
+            a {
+              font-size: 24px;
+              display: inline-block;
+              border-bottom: 1px solid gray;
+              transition: color 400ms;
+              &:hover {
+                color: $orange;
+              }
+            }
+          }
+        }
+        .menu {
+          display: block;
+        }
+      }
+    }
+  }
+  .main-header {
+    .heading-section {
+      h1 {
+        font-size: 56px;
+      }
+      .btn {
+        font-size: 16px;
+        padding: 15px 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    .heading-section {
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+}
