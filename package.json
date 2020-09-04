@@ -7,7 +7,7 @@
     "sal.js": "^0.7.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "sass": "node-sass scss/main.scss css/main.css  -w"
